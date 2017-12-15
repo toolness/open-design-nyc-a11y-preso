@@ -25,6 +25,34 @@ html, body {
   color: white;
   background: #7952b3;
 }
+
+.focus-ring {
+  outline: 1px solid blue;
+}
+
+.focus-ring-overlay {
+  background: rgba(0, 0, 255, 0.25);
+  transition: top 0.2s, left 0.2s, width 0.2s, height 0.2s, opacity 0.125s;
+}
+
+kbd {
+    -moz-border-radius:3px;
+    -moz-box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+    -webkit-border-radius:3px;
+    -webkit-box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+    background-color:#f7f7f7;
+    border:1px solid #ccc;
+    border-radius:3px;
+    box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+    color:#333;
+    display:inline-block;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:11px;
+    line-height:1.4;
+    margin:0 .1em;
+    padding:.1em .6em;
+    text-shadow:0 1px 0 #fff;
+}
 </style>
 <title>Accessibility and open design</title>
 <h1>Accessibility and open design</h1>
@@ -37,7 +65,7 @@ html, body {
 <ol>
   <li><a href="http://pode.herokuapp.com/">Pode</a> is an experimental code editor for newcomers to programming who are visually impaired. Also see my <a href="http://www.toolness.com/wp/post/pode-an-accessible-code-editor/">blog post on Pode</a>.</li>
   <li><a href="https://toolness.github.io/accessible-color-matrix/">Accessible color palette builder</a></li>
-  <li><a href="https://toolness.github.io/animated-focus-ring/">Animated focus ring</a></li>
+  <li><a href="https://toolness.github.io/animated-focus-ring/">Animated focus ring</a> is active on this page (try pressing <kbd>Tab</kbd>).</li>
 </ol>
 <h2>Designing for inclusivity</h2>
 <img src="inclusive-design-ms.gif" class="maxwidth"
@@ -113,3 +141,5 @@ document.querySelector('#badbtn').addEventListener('click', () => {
   badLog.appendChild(document.createTextNode('I am a bad notification!\n'));
 });
 </script>
+<script src="focus-ring.js"></script>
+<script src="animated-focus-ring.js"></script>
